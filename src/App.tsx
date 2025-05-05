@@ -1,7 +1,38 @@
+declare global {
+  interface Window {
+    Telegram?: {
+      WebApp?: {
+        initData?: string;
+        initDataUnsafe?: {
+          user?: {
+            id?: number;
+            first_name?: string;
+            last_name?: string;
+            username?: string;
+            language_code?: string;
+            photo_url?: string;
+          };
+        };
+        ready?: () => void;
+      };
+    };
+  }
+}
+
 import './index.css';
 import logo from './assets/flutterra_logo.svg';
+import {useEffect} from "react";
 
 function App() {
+    const tg = window.Telegram?.WebApp;
+    const user = tg?.initDataUnsafe?.user;
+
+    useEffect(() => {
+        if (tg?.ready) {
+            tg.ready();
+        }
+    }, []);
+
     return (
         <main className="container">
             <img src={logo} alt="Flutterra logo" className="logo"/>
@@ -17,6 +48,11 @@ function App() {
                     Работаю быстро, без лишних заморочек, и умею слушать. Если нужен сайт, приложение или бот — пишите,
                     буду рада вам помочь.
                 </p>
+                {user && (
+                  <p style={{ marginTop: "1rem", fontStyle: "italic" }}>
+                    Привет, {user.first_name}!
+                  </p>
+                )}
             </div>
 
             <h2>Что я делаю</h2>
@@ -24,7 +60,7 @@ function App() {
                 <li>Разработка сайтов — быстро, без шаблонности</li>
                 <li>Flutter-приложения — от идеи до релиза</li>
                 <li>Telegram-боты — на React и Web Apps</li>
-                <li>Дизайн интерфейсов — с учётом пользователей</li>
+                <li>Дизайн интерфейсов — с учётом пожеланий пользователя</li>
             </ul>
 
             <a
