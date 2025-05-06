@@ -37,6 +37,7 @@ function App() {
         <main className="container">
             <img src={logo} alt="Flutterra logo" className="logo"/>
 
+            <div>Привет, {user?.first_name}!</div>
             <div className="list">
                 <p>
                     Меня зовут Анастасия. Я занимаюсь созданием сайтов и мобильных приложений уже более 10 лет — с 2012
@@ -55,12 +56,12 @@ function App() {
                 )}
             </div>
 
-            <h2>Что я делаю</h2>
+            <h2 className="section-heading">Что я делаю</h2>
             <ul className="service-list">
-                <li>Разработка сайтов — быстро, без шаблонности</li>
-                <li>Flutter-приложения — от идеи до релиза</li>
-                <li>Telegram-боты — на React и Web Apps</li>
-                <li>Дизайн интерфейсов — с учётом пожеланий пользователя</li>
+              <li><strong>Разработка сайтов</strong> — быстро, без шаблонности</li>
+              <li><strong>Flutter-приложения</strong> — от идеи до релиза</li>
+              <li><strong>Telegram-боты</strong> — на React и Web Apps</li>
+              <li><strong>Дизайн интерфейсов</strong> — с учётом пожеланий пользователя</li>
             </ul>
 
             <a

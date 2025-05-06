@@ -60,3 +60,22 @@ p {
 .btn:hover {
   background: #368c73;
 }
+
+.section-heading {
+  color: var(--muted);
+
+}
+
+.service-list {
+  list-style: disc inside;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 1rem;
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+.service-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
