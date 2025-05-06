@@ -70,7 +70,7 @@ p {
 
 .section-heading {
   color: var(--muted);
-
+  padding: 0;
 }
 
 .stack-logos {
