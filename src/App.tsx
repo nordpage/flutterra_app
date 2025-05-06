@@ -58,7 +58,6 @@ function App() {
 
             </div>
 
-            <h2 className="section-heading">Технологии</h2>
             <div className="stack-logos">
                 <img src={reactLogo} alt="React" />
                 <img src="./assets/stack/typescript.svg" alt="TypeScript" />
