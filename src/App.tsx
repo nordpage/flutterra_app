@@ -24,6 +24,7 @@ declare global {
                     show: () => void;
                     hide: () => void;
                 };
+                setBackgroundColor?: (color: string) => void;
             };
         };
     }
@@ -41,6 +42,7 @@ function App() {
     useEffect(() => {
         if (tg?.ready) {
             tg.ready();
+            tg.setBackgroundColor?.('#1e1e1b');
             tg.MainButton?.setParams({
                 text: "Связаться",
                 is_visible: true,
