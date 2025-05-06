@@ -1,22 +1,32 @@
 declare global {
-  interface Window {
-    Telegram?: {
-      WebApp?: {
-        initData?: string;
-        initDataUnsafe?: {
-          user?: {
-            id?: number;
-            first_name?: string;
-            last_name?: string;
-            username?: string;
-            language_code?: string;
-            photo_url?: string;
-          };
+    interface Window {
+        Telegram?: {
+            WebApp?: {
+                initData?: string;
+                initDataUnsafe?: {
+                    user?: {
+                        id?: number;
+                        first_name?: string;
+                        last_name?: string;
+                        username?: string;
+                        language_code?: string;
+                        photo_url?: string;
+                    };
+                };
+                ready?: () => void;
+                MainButton?: {
+                    setParams: (params: {
+                        text?: string;
+                        color?: string;
+                        text_color?: string;
+                        is_visible?: boolean;
+                    }) => void;
+                    show: () => void;
+                    hide: () => void;
+                };
+            };
         };
-        ready?: () => void;
-      };
-    };
-  }
+    }
 }
 
 import './index.css';
@@ -31,13 +41,13 @@ function App() {
     useEffect(() => {
         if (tg?.ready) {
             tg.ready();
-            tg.MainButton.setParams({
+            tg.MainButton?.setParams({
                 text: "Связаться",
                 is_visible: true,
                 color: "#4DA88A",
                 text_color: "#ffffff"
             });
-            tg.MainButton.show();
+            tg.MainButton?.show();
         }
     }, []);
 
