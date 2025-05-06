@@ -37,7 +37,12 @@ function App() {
         <main className="container">
             <img src={logo} alt="Flutterra logo" className="logo"/>
 
-            <div>Привет, {user?.first_name}!</div>
+            {user && (
+                <p style={{ marginTop: "1rem", fontStyle: "italic" }}>
+                    Привет, {user.first_name}!
+                </p>
+            )}
+
             <div className="list">
                 <p>
                     Меня зовут Анастасия. Я занимаюсь созданием сайтов и мобильных приложений уже более 10 лет — с 2012
@@ -49,11 +54,7 @@ function App() {
                     Работаю быстро, без лишних заморочек, и умею слушать. Если нужен сайт, приложение или бот — пишите,
                     буду рада вам помочь.
                 </p>
-                {user && (
-                  <p style={{ marginTop: "1rem", fontStyle: "italic" }}>
-                    Привет, {user.first_name}!
-                  </p>
-                )}
+
             </div>
 
             <h2 className="section-heading">Что я делаю</h2>
