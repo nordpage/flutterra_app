@@ -92,15 +92,6 @@ function App() {
               <li><strong>Telegram-боты</strong> — на React и Web Apps</li>
               <li><strong>Дизайн интерфейсов</strong> — с учётом пожеланий пользователя</li>
             </ul>
-
-            <a
-                className="btn"
-                href="https://t.me/FlutterraBot"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Связаться
-            </a>
         </main>
     );
 }
