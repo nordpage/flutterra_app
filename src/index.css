@@ -5,7 +5,12 @@
   --muted: #aaa;
 }
 
-
+html, body {
+  background-color: #1e1e1b; /* как на основном сайте */
+  color: #e6e4df;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background: var(--bg);
