@@ -6,7 +6,7 @@
 }
 
 html, body {
-  background-color: #1e1e1b; /* как на основном сайте */
+  background-color: #1e1e1b;
   color: #e6e4df;
   margin: 0;
   padding: 0;
@@ -21,6 +21,17 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
+}
+
+body::after {
+  content: "";
+  display: block;
+  height: env(safe-area-inset-bottom);
+  background-color: #1e1e1b;
+}
+
+.tg-header {
+  color: #e6e4df;
 }
 
 .container {
@@ -98,7 +109,7 @@ p {
   color: var(--muted);
   font-family: inherit;
   font-size: 1rem;
-  margin: 1.5rem 0;
+  margin: 16px 0;
   padding: 0;
 }
 
