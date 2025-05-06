@@ -25,6 +25,8 @@ declare global {
                     hide: () => void;
                 };
                 setBackgroundColor?: (color: string) => void;
+                onEvent?: (eventType: string, callback: () => void) => void;
+                offEvent?: (eventType: string, callback: () => void) => void;
             };
         };
     }
@@ -51,6 +53,21 @@ function App() {
             });
             tg.MainButton?.show();
         }
+    }, []);
+
+    useEffect(() => {
+        if (!tg) return;
+
+        const handleClick = () => {
+            // Например, переход в Telegram-бота, или отправка сообщения
+            window.open('https://t.me/FlutterraBot', '_blank')
+        };
+
+        tg?.onEvent?.('mainButtonClicked', handleClick);
+
+        return () => {
+            tg?.offEvent?.('mainButtonClicked', handleClick);
+        };
     }, []);
 
     return (
