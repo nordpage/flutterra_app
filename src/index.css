@@ -54,12 +54,16 @@ body::after {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text);
 }
 
 p {
-  color: var(--muted);
   margin: 0;
   line-height: 1.6;
+  font-size: 1rem;
+  color: var(--text);
 }
 
 .btn {
@@ -106,12 +110,12 @@ p {
 }
 
 .service-list {
-  list-style: disc inside;
-  color: var(--muted);
-  font-family: inherit;
+  list-style: disc;
+  padding-left: 1.2rem;
+  color: var(--text);
   font-size: 1rem;
-  margin: 16px 0;
-  padding: 0;
+  text-align: left;
+  margin: 1rem 0 2rem;
 }
 
 .service-list li {
