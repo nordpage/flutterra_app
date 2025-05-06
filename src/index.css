@@ -6,8 +6,8 @@
 }
 
 html, body {
-  background-color: #1e1e1b;
-  color: #e6e4df;
+  background-color: var(--bg);
+  color: var(--text);
   margin: 0;
   padding: 0;
 }
@@ -27,11 +27,11 @@ body::after {
   content: "";
   display: block;
   height: env(safe-area-inset-bottom);
-  background-color: #1e1e1b;
+  background-color: var(--bg);
 }
 
 .tg-header {
-  color: #e6e4df;
+  color: var(--text);
 }
 
 .container {
@@ -80,7 +80,7 @@ p {
 }
 
 .section-heading {
-  color: var(--muted);
+  color: var(--text);
   padding: 0;
   margin: 0;
 }
