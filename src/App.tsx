@@ -39,7 +39,7 @@ import {useEffect} from "react";
 
 function App() {
     const tg = window.Telegram?.WebApp;
-    const user = tg?.initDataUnsafe?.user;
+    //const user = tg?.initDataUnsafe?.user;
 
     useEffect(() => {
         if (tg?.ready) {
