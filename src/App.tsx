@@ -74,11 +74,6 @@ function App() {
         <main className="container">
             <img src={logo} alt="Flutterra logo" className="logo"/>
 
-            {user && (
-                <p style={{ marginTop: "1rem", fontStyle: "italic" }}>
-                    Привет, {user.first_name}!
-                </p>
-            )}
 
             <div className="list">
                 <p>
