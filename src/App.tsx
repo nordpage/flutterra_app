@@ -21,6 +21,7 @@ declare global {
 
 import './index.css';
 import logo from './assets/flutterra_logo.svg';
+import reactLogo from './assets/stack/react.svg'
 import {useEffect} from "react";
 
 function App() {
@@ -59,7 +60,7 @@ function App() {
 
             <h2 className="section-heading">Технологии</h2>
             <div className="stack-logos">
-                <img src="./assets/stack/react.svg" alt="React" />
+                <img src={reactLogo} alt="React" />
                 <img src="./assets/stack/typescript.svg" alt="TypeScript" />
                 <img src="./assets/stack/flutter.svg" alt="Flutter" />
                 <img src="./assets/stack/telegram.svg" alt="Telegram API" />
