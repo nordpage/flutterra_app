@@ -31,6 +31,13 @@ function App() {
     useEffect(() => {
         if (tg?.ready) {
             tg.ready();
+            tg.MainButton.setParams({
+                text: "Связаться",
+                is_visible: true,
+                color: "#4DA88A",
+                text_color: "#ffffff"
+            });
+            tg.MainButton.show();
         }
     }, []);
 
