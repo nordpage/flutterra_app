@@ -59,11 +59,11 @@ function App() {
 
             <h2 className="section-heading">Технологии</h2>
             <div className="stack-logos">
-                <img src="/assets/stack/react.svg" alt="React" />
-                <img src="/assets/stack/typescript.svg" alt="TypeScript" />
-                <img src="/assets/stack/flutter.svg" alt="Flutter" />
-                <img src="/assets/stack/telegram.svg" alt="Telegram API" />
-                <img src="/assets/stack/css.svg" alt="CSS" />
+                <img src="./assets/stack/react.svg" alt="React" />
+                <img src="./assets/stack/typescript.svg" alt="TypeScript" />
+                <img src="./assets/stack/flutter.svg" alt="Flutter" />
+                <img src="./assets/stack/telegram.svg" alt="Telegram API" />
+                <img src="./assets/stack/css.svg" alt="CSS" />
             </div>
 
             <h2 className="section-heading">Что я делаю</h2>
